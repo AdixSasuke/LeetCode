@@ -16,13 +16,22 @@ class Solution {
         return result;
     }
     
-    public boolean hasEvenDigits(int num){
+    // public boolean hasEvenDigits(int num){
+    //     boolean result = false;
+    //     int count = 0;
+    //     while(num > 0){
+    //         count++;
+    //         num = num/10;
+    //     }
+    //     if(count % 2 == 0){
+    //         result = true;
+    //     }
+    //     return result;
+    // }
+
+        public boolean hasEvenDigits(int num){
         boolean result = false;
-        int count = 0;
-        while(num > 0){
-            count++;
-            num = num/10;
-        }
+        int count = (int) Math.log10(num) + 1;
         if(count % 2 == 0){
             result = true;
         }
